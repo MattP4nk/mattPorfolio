@@ -93,10 +93,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "mattPorfolio:build:production"
+              "buildTarget": "mattPorfolio:build:production"
             },
             "development": {
-              "browserTarget": "mattPorfolio:build:development"
+              "buildTarget": "mattPorfolio:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -104,7 +104,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mattPorfolio:build"
+            "buildTarget": "mattPorfolio:build"
           }
         },
         "test": {
@@ -126,6 +126,5 @@
         }
       }
     }
-  },
-  "defaultProject": "mattPorfolio"
+  }
 }

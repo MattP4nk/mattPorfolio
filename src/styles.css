@@ -1,1 +1,323 @@
-/* You can add global styles to this file, and also import other style files */
+@media screen and (min-width: 767px) {
+  .headline {
+    display: none;
+  }
+  .brand-size {
+    height: 10vmin;
+    width: 20vmin;
+  }
+  .roboto-text {
+    font-size: medium;
+  }
+  .intro-div {
+    height: min-content;
+  }
+  .intro-div .roboto-text {
+    font-size: medium;
+  }
+  .carou-cont .roboto-text {
+    font-size: medium;
+  }
+
+  .banner-body {
+    max-width: 70vw;
+  }
+  .banner-body .roboto-text {
+    font-size: larger;
+  }
+
+  .aside {
+    height: 50vmax;
+    width: 60vmax;
+    max-width: 80vw;
+    max-height: 50vh;
+  }
+
+  .skills-col {
+    width: 25vw;
+  }
+  .roboto-chat {
+    font-size: large;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .brand-size {
+    height: 10vh;
+  }
+  .nave-fondo {
+    min-height: 65px;
+  }
+  .intro-div {
+    height: max-content;
+    max-height: 15vh;
+    overflow: hidden;
+    width: 90vw;
+  }
+  .intro-div .roboto-text {
+    font-size: x-small;
+  }
+
+  .roboto-text {
+    font-size: small;
+  }
+  .banner-body {
+    max-width: 85vw;
+  }
+  .banner-body .roboto-text {
+    font-size: medium;
+  }
+  .aside {
+    height: 40vh;
+    width: 97vw;
+  }
+  .skills-col {
+    width: 100vw;
+  }
+  .roboto-chat {
+    font-size: 0.6rem;
+  }
+  
+  .nav-link{
+    font-size: small;
+    color: azure;
+    margin: 0px;
+    margin-bottom: 25%;
+    padding: 0px;
+    min-width: 35px;
+  }
+}
+.roboto-text {
+  font-family: "Press Start 2P";
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px #000000;
+}
+
+.back {
+  background-image: URL("/assets/fondobase.svg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #000000;
+}
+
+.nave-fondo {
+  background: #000000;
+  padding: 0px;
+  height: 20px;
+}
+
+.nave-colap {
+  background: url("/assets/navbar.png");
+  height: 100%;
+}
+
+.login-btn {
+  margin-left: 1vmin;
+  width: 5vmin;
+  text-align: justify;
+  font-size: 30px;
+  font-weight: bold;
+  height: 5.5vmin;
+}
+
+.social-icon {
+  min-width: 35px;
+  width: 5vmin;
+  padding: auto;
+  height: 100%;
+}
+
+.row {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.col {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.banner {
+  height: 100vh;
+  width: 90vw;
+  background-size: 100vw 100vh;
+  background-position: right;
+  padding: 0px;
+}
+
+.banner-title {
+  font-family: "Press Start 2P";
+  color: azure;
+  background-image: linear-gradient(to right, #000000 80%, rgba(0, 0, 0, 0));
+  width: fit-content;
+  height: fit-content;
+}
+.banner-body {
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+}
+
+.mugshot-size {
+  width: 35vmin;
+  height: 35vmin;
+  min-width: 100px;
+}
+
+.img-header {
+  max-height: 8vh;
+  max-width: 80vw;
+  align-self: start;
+  position: relative;
+}
+
+.img-item {
+  height: auto;
+  max-height: 5vh;
+  align-self: start;
+  position: absolute;
+  top: -30px;
+  left: 10px;
+  z-index: 3;
+}
+
+.page {
+  height: 95vh;
+  padding: 2vmin;
+  overflow: scroll;
+}
+
+.muse {
+  background-color: #fff;
+}
+
+.line {
+  height: 2vmin;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-width: 10px;
+}
+
+.black{
+  background: #000000;
+}
+
+.red{
+  background: #04027e99;
+}
+
+.row-cont {
+  height: fit-content;
+  max-height: 90vh;
+  position: relative;
+  margin-bottom: 5vh;
+}
+
+.cols-gene {
+  padding: 0px;
+  padding-left: 10px;
+  height: 100%;
+  width: fit-content;
+  max-height: 25vh;
+  flex-wrap: nowrap;
+  display: flex;
+  overflow: scroll;
+}
+
+.cols-gene .ul{
+  padding: 0px;
+  padding-inline-start: opx;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0);
+}
+.void {
+  background-color: #fff;
+  opacity: 0;
+  height: 65vh;
+}
+
+.projectFace {
+  width: 100%;
+  margin: 0px;
+}
+
+.carou-cont {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+.aside {
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 1%,
+    #03211e 100%
+  );
+  padding: 0px;
+  margin: 0px;
+  padding-right: 1vmax;
+  outline: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: darkslategray;
+}
+
+input,
+#prompt {
+  display: block;
+}
+
+#input {
+  caret-color: transparent;
+  outline: none;
+  color: #fff;
+  border-style: solid;
+  background: rgb(0, 0, 0);
+  border-color: darkseagreen;
+  border-width: 0.5vmin;
+  max-width: 100%;
+}
+
+#output {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 5%, #03211e 100%);
+  border-style: solid;
+  border-color: darkslategray;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+}
+
+.no-pad {
+  padding: 0px;
+}
+
+.no-marg {
+  margin: 0px;
+}
+
+.card {
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.roboto-chat {
+  text-align: left;
+  margin-bottom: auto;
+  font-family: "Press Start 2P", monospace;
+}
+
+.form-control {
+  display: inline-block;
+  width: 40vmin;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
