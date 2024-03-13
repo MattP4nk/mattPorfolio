@@ -84,19 +84,27 @@ export class MuseComponent implements OnInit {
   private key = 'key';
 
   handler() {
-    console.log('Current task ' + this.current_task);
     let input = this.io['input'].value;
     this.io['input'].value = '';
-    if (input == '') {
-      this.print(this.user + ': *ENTER* ', false);
-    } else {
-      this.print(this.user + ': ' + input, false);
-      if (this.current_task != '') {
-        this.communication('user_response', input);
+    if (input == 'clear'){
+      this.clearConsole()
+      this.communication("muse_response", "**CLEAR**")
+    }else if (input == 'cancel'){
+      this.communication("muse_response", this.current_task + " canceled.")
+      this.current_task = ""
+    }else{
+      if (input == '') {
+        this.print(this.user + ': *ENTER* ', false);
       } else {
-        this.communication('user_command', input);
+        this.print(this.user + ': ' + input, false);
+        if (this.current_task != '') {
+          this.communication('user_response', input);
+        } else {
+          this.communication('user_command', input);
+        }
       }
     }
+    
   }
 
   displayAssistant(): void {
@@ -117,6 +125,10 @@ export class MuseComponent implements OnInit {
     }
   }
 
+  clearConsole(){
+    this.io['output'].innerHTML = null
+  }
+
   initialMessage(): void {
     this.communication(
       'muse_response',
@@ -126,7 +138,7 @@ export class MuseComponent implements OnInit {
     this.io['button'].src = '/assets/muse2.png';
   }
 
-  communication(head: string, message: string) {
+  communication(head: string, message: string) {  
     /*if (this.yesNo) {
       //confirmation control for other functions.
       message = message.toLowerCase();
@@ -143,13 +155,13 @@ export class MuseComponent implements OnInit {
     }*/
     switch (head) {
       //handling assistant responses and solits
-      /*case 'muse_response':
+      case 'muse_response':
         if (message.search('Yes' && 'No') > 0) {
           this.yesNo = true;
         }
         this.printList(message);
         break;
-      case 'muse_exit':
+      /*case 'muse_exit':
         this.current_task = '';
         break;*/
       //handling user cmds and responses

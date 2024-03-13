@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AbmModel } from 'src/Models/AbmModel';
+import { AbmModel } from 'src/app/models/AbmModel';
+
 import { PetitionModel } from 'src/app/models/PetitionModel';
 import { InfoService } from 'src/app/services/info.service';
 
