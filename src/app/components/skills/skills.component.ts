@@ -29,41 +29,44 @@ import { InfoService } from 'src/app/services/info.service';
             style="padding: 10px;"
           >
             <div class="carousel-inner" style="border-radius: 30px;">
-              <div class="carousel-item">
+              <div class="carousel-item" style="overflow-y: scroll;">
                 <div class="card">
                   <img class="card-img w-100 d-block void" />
-                  <div class="card-img-overlay">
+                  <div class="card-img-overlay" style="color: azure;">
                     <h4>Languages</h4>
                     <ul>
                       <p class="roboto-text" *ngFor="let skill of codingSkills">
-                        =>{{ skill.name }}<br />==>{{ skill.knowledge }}
+                      <span class="d-flex red line"></span>
+                        =>{{ skill.name }}<br>==>{{ skill.knowledge }}
                       </p>
                     </ul>
                   </div>
                 </div>
               </div>
-              <div class="carousel-item">
+              <div class="carousel-item" style="overflow-y: scroll;">
                 <div class="card">
                   <img class="card-img w-100 d-block void" />
-                  <div class="card-img-overlay">
+                  <div class="card-img-overlay" style="color: azure;">
                     <h4>Path</h4>
                     <p></p>
                     <ul>
                       <p class="roboto-text" *ngFor="let skill of codingSkills">
-                        =>{{ skill.name }}<br />==>{{ skill.thoughts }}
+                      <span class="d-flex red line"></span>
+                        =>{{ skill.name }}<br>==>{{ skill.growt }}
                       </p>
                     </ul>
                   </div>
                 </div>
               </div>
-              <div class="carousel-item active">
+              <div class="carousel-item active" style=" overflow-y: scroll;">
                 <div class="card">
                   <img class="card-img w-100 d-block void" />
-                  <div class="card-img-overlay">
+                  <div class="card-img-overlay" style="color: azure;">
                     <h4>[C0de]</h4>
                     <ul>
                       <p class="roboto-text" *ngFor="let skill of codingSkills">
-                        =>{{ skill.name }}<br />==>{{ skill.detail }}
+                      <span class="d-flex red line"></span>
+                        =>{{ skill.name }}<br>==>{{ skill.detail }}
                       </p>
                     </ul>
                   </div>
@@ -95,7 +98,8 @@ import { InfoService } from 'src/app/services/info.service';
             </div>
           </div>
         </div>
-        <div class="col-auto skills-col text-center" style="padding: 0px;">
+        <!-- I'll add this section later -->
+        <!--<div class="col-auto skills-col text-center" style="padding: 0px;">
           <img src="/assets/Writing.png" />
           <div
             id="carousel-2"
@@ -104,49 +108,43 @@ import { InfoService } from 'src/app/services/info.service';
             style="padding: 10px;"
           >
             <div class="carousel-inner" style="border-radius: 30px;">
-              <div class="carousel-item active">
+              <div class="carousel-item active" style="overflow-y: scroll;">
                 <div class="card">
                   <img class="card-img w-100 d-block void" />
-                  <div class="card-img-overlay">
+                  <div class="card-img-overlay" style="color: azure;">
                     <h4>On the Page</h4>
                     <ul>
-                      <p
-                        class="roboto-text"
-                        *ngFor="let skill of writingSkills"
-                      >
-                        =>{{ skill.name }}<br />==>{{ skill.knowledge }}
+                      <p class="roboto-text"  *ngFor="let skill of writingSkills">
+                      <span class="d-flex red line"></span>
+                        =>{{ skill.name }}<br>==>{{ skill.knowledge }}
                       </p>
                     </ul>
                   </div>
                 </div>
               </div>
-              <div class="carousel-item">
+              <div class="carousel-item" style="overflow-y: scroll;">
                 <div class="card">
                   <img class="card-img w-100 d-block void" />
-                  <div class="card-img-overlay">
+                  <div class="card-img-overlay" style="color: azure;">
                     <h4>Next Chapter</h4>
                     <ul>
-                      <p
-                        class="roboto-text"
-                        *ngFor="let skill of writingSkills"
-                      >
-                        =>{{ skill.name }}<br />==>{{ skill.thoughts }}
+                      <p class="roboto-text" *ngFor="let skill of writingSkills" >
+                      <span class="d-flex red line"></span>
+                        =>{{ skill.name }}<br>==>{{ skill.growt }}
                       </p>
                     </ul>
                   </div>
                 </div>
               </div>
-              <div class="carousel-item">
+              <div class="carousel-item" style="overflow-y: scroll;">
                 <div class="card">
                   <img class="card-img w-100 d-block void" />
-                  <div class="card-img-overlay">
+                  <div class="card-img-overlay" style="color: azure;">
                     <h4>Fragments</h4>
                     <ul>
-                      <p
-                        class="roboto-text"
-                        *ngFor="let skill of writingSkills"
-                      >
-                        =>{{ skill.name }}<br />==>{{ skill.detail }}
+                      <p class="roboto-text" *ngFor="let skill of writingSkills">
+                      <span class="d-flex red line"></span>
+                        =>{{ skill.name }}<br>==>{{ skill.detail }}
                       </p>
                     </ul>
                   </div>
@@ -171,76 +169,7 @@ import { InfoService } from 'src/app/services/info.service';
               >
             </div>
           </div>
-        </div>
-        <div class="col-auto skills-col text-center" style="padding: 0px;">
-          <img src="/assets/Social.png" />
-          <div
-            id="carousel-3"
-            class="carousel slide"
-            data-bs-ride="carousel"
-            style="padding: 10px;"
-          >
-            <div class="carousel-inner" style="border-radius: 30px;">
-              <div class="carousel-item active">
-                <div class="card">
-                  <img class="card-img w-100 d-block void" />
-                  <div class="card-img-overlay">
-                    <h4>Social</h4>
-                    <ul>
-                      <p class="roboto-text" *ngFor="let skill of lifeSkills">
-                        =>{{ skill.name }}<br />==>{{ skill.knowledge }}
-                      </p>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card">
-                  <img class="card-img w-100 d-block void" />
-                  <div class="card-img-overlay">
-                    <h4>Digital</h4>
-                    <ul>
-                      <p class="roboto-text" *ngFor="let skill of lifeSkills">
-                        =>{{ skill.name }}<br />==>{{ skill.thoughts }}
-                      </p>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card">
-                  <img class="card-img w-100 d-block void" />
-                  <div class="card-img-overlay">
-                    <h4>Misc</h4>
-                    <ul>
-                      <p class="roboto-text" *ngFor="let skill of lifeSkills">
-                        =>{{ skill.name }}<br />==>{{ skill.detail }}
-                      </p>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <a
-                class="carousel-control-prev"
-                href="#carousel-3"
-                role="button"
-                data-bs-slide="prev"
-              >
-                <span class="carousel-control-prev-icon"></span
-                ><span class="visually-hidden">Previous</span></a
-              ><a
-                class="carousel-control-next"
-                href="#carousel-3"
-                role="button"
-                data-bs-slide="next"
-                ><span class="carousel-control-next-icon"></span
-                ><span class="visually-hidden">Next</span></a
-              >
-            </div>
-          </div>
-        </div>
+        </div> -->
       </div>
     </section>
   `,
@@ -255,26 +184,23 @@ export class SkillsComponent implements OnInit {
 
   codingSkills: Array<SkillModel> = [];
   writingSkills: Array<SkillModel> = [];
-  lifeSkills: Array<SkillModel> = [];
 
   getPetition: PetitionModel = {
     request: 'get',
-    area: 'education',
+    area: 'skills',
     target: 'all',
     key: undefined,
   };
   getSkills() {
     this.infoService.infoManager(this.getPetition).subscribe((data) => {
-      for (let edu of data.response) {
-        switch (edu.type) {
+      for (let skill of data.response) {
+        console.log(data.response)
+        switch (skill.type) {
           case 'Coding':
-            this.codingSkills.push(edu);
+            this.codingSkills.push(skill);
             break;
           case 'Writing':
-            this.writingSkills.push(edu);
-            break;
-          case 'Life':
-            this.lifeSkills.push(edu);
+            this.writingSkills.push(skill);
             break;
         }
       }

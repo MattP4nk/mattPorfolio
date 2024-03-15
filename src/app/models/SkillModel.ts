@@ -5,5 +5,5 @@ export class SkillModel{
     knowledge!: string | undefined;
     type!: string | undefined;
     detail!: string | undefined;
-
+    growt!: string | undefined;
 }

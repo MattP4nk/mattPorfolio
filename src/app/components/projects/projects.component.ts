@@ -25,6 +25,7 @@ import { InfoService } from 'src/app/services/info.service';
             </div>
             <div class="col">
               <h3 style="font-size: medium;">{{ slide.name }}</h3>
+              <span class="d-flex red line"></span>
               <p>{{ slide.details }}</p>
             </div>
           </div>

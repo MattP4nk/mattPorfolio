@@ -102,7 +102,7 @@ export class EducationComponent implements OnInit {
           case 'Course':
             this.courseEdus.push(edu);
             break;
-          case 'Hobbie':
+          case 'Hobbies':
             this.hobbiesEdus.push(edu);
             break;
         }

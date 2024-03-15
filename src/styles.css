@@ -34,7 +34,7 @@
   }
 
   .skills-col {
-    width: 25vw;
+    width: 80vw;
   }
   .roboto-chat {
     font-size: large;
@@ -183,7 +183,7 @@
 
 .page {
   height: 95vh;
-  padding: 2vmin;
+  padding: 5vmin;
   overflow: scroll;
 }
 

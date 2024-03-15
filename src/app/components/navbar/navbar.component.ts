@@ -34,32 +34,19 @@ import { Component, OnInit } from '@angular/core';
           <div class="offcanvas-body" style="background-color: black; padding=0px; position: relative;">
             <ul class="nav flex-column text-center" style="width:100%">
               <li>
-                <a class="nav-link" routerLink="/" style="color: azure;"
-                  >#About Matt</a
-                >
+                <a class="nav-link" routerLink="/" style="color: azure;"> #About Matt </a >
               </li>
               <li>
-                <a class="nav-link" routerLink="/Jobs" style="color: azure;"
-                  >#About Jobs</a
-                >
+                <a class="nav-link" routerLink="/Education" style="color: azure;"> #About Education </a>
               </li>
               <li>
-                <a class="nav-link" routerLink="/Skills" style="color: azure;"
-                  >#About Skills</a
-                >
+                <a class="nav-link" routerLink="/Jobs" style="color: azure;"> #About Jobs </a>
               </li>
               <li>
-                <a
-                  class="nav-link"
-                  routerLink="/Education"
-                  style="color: azure;"
-                  >#About Education</a
-                >
+                <a class="nav-link" routerLink="/Skills" style="color: azure;"> #About Skills </a>
               </li>
               <li>
-                <a class="nav-link" routerLink="/Projects" style="color: azure;"
-                  >#About Projects</a
-                >
+                <a class="nav-link" routerLink="/Projects" style="color: azure;"> #About Projects </a>
               </li>
             </ul>
             <ul

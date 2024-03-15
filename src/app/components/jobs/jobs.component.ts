@@ -96,13 +96,13 @@ export class JobsComponent implements OnInit {
     this.infoService.infoManager(this.getPetition).subscribe((data) => {
       for (let job of data.response) {
         switch (job.type) {
-          case 'Making a Living':
+          case 'Living':
             this.surviveJobs.push(job);
             break;
-          case 'Great Experiences':
+          case 'Great':
             this.awesomeJobs.push(job);
             break;
-          case 'Dream Job':
+          case 'Dreams':
             this.dreamJobs.push(job);
             break;
         }
