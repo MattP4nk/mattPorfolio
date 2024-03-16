@@ -72,6 +72,7 @@ export class MattComponent implements OnInit {
   }
   getMatt() {
     this.infoService.infoManager(this.petition).subscribe((data) => {
+      console.log(data)
       this.abm = data.response;
     });
   }
