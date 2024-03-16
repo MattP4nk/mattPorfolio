@@ -64,10 +64,10 @@ import { Component, OnInit } from '@angular/core';
               <li class="nav-item">
                 <a
                   class="nav-link"
-                  href="https://www.instagram.com/mattp4nk/"
+                  href="https://github.com/MattP4nk/mattPorfolio"
                   target="”_blank”"
                   style="margin-left: 10px; margin-right: 10px;"
-                  ><img class="social-icon" src="/assets/instagram.png"
+                  ><img class="social-icon" src="/assets/github.png"
                 /></a>
               </li>
               <li class="nav-item">
