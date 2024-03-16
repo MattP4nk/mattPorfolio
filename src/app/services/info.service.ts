@@ -11,7 +11,7 @@ export class InfoService {
 
   constructor(private http:HttpClient) { }
 
-  infoUrl = "http://localhost:3000/info"
+  infoUrl = "https://back-matt.onrender.com/info"
   
   infoManager(petition: PetitionModel):Observable<AnswerModel>{
     return this.http.post<AnswerModel>(this.infoUrl, petition);

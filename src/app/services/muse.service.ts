@@ -10,7 +10,7 @@ export class MuseService {
 
   constructor(private http:HttpClient) { }
 
-  museUrl = "http://localhost:3000/muse"
+  museUrl = "https://back-matt.onrender.com/muse"
 
   museManager(museCmd: CommsDto){
     return this.http.post<AnswerModel>(this.museUrl, museCmd);
