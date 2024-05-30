@@ -79,20 +79,16 @@ export class MuseComponent implements OnInit {
   private io: { [key: string]: any } = {};
   private user: string = 'Guest';
   private awake: boolean = false;
-  private yesNo: boolean = false;
   private current_task: string = '';
   private key = 'key';
 
   handler() {
     let input = this.io['input'].value;
     this.io['input'].value = '';
-    if (input == 'clear'){
-      this.clearConsole()
-      this.communication("muse_response", "**CLEAR**")
-    }else if (input == 'cancel'){
-      this.communication("muse_response", this.current_task + " canceled.")
-      this.current_task = ""
-    }else{
+    if (input == 'clear') {
+      this.clearConsole();
+      this.communication('muse_response', '**CLEAR**');
+    } else {
       if (input == '') {
         this.print(this.user + ': *ENTER* ', false);
       } else {
@@ -104,7 +100,6 @@ export class MuseComponent implements OnInit {
         }
       }
     }
-    
   }
 
   displayAssistant(): void {
@@ -125,88 +120,47 @@ export class MuseComponent implements OnInit {
     }
   }
 
-  clearConsole(){
-    this.io['output'].innerHTML = null
+  clearConsole() {
+    this.io['output'].innerHTML = null;
   }
 
   initialMessage(): void {
-    this.communication(
-      'muse_response',
+    this.printList(
       'Hi! This is the virtual assistant of this CV!\nYou can ask for more detailed information here!\nPlease tipe "help" for more info!'
     );
     this.io['sign'].src = '/assets/muse.png';
     this.io['button'].src = '/assets/muse2.png';
   }
 
-  communication(head: string, message: string) {  
-    /*if (this.yesNo) {
-      //confirmation control for other functions.
-      message = message.toLowerCase();
-      if (message != 'yes' && message != 'no') {
-        this.printList(
-          'Sorry, "' +
-            message +
-            '" is a wrong answer!\nPlease just answer with: Yes//No.'
-        );
-        return;
-      } else {
-        this.yesNo = !this.yesNo;
-      }
-    }*/
+  communication(head: string, message: string) {
     switch (head) {
-      //handling assistant responses and solits
-      case 'muse_response':
-        if (message.search('Yes' && 'No') > 0) {
-          this.yesNo = true;
-        }
-        this.printList(message);
-        break;
-      /*case 'muse_exit':
-        this.current_task = '';
-        break;*/
-      //handling user cmds and responses
       case 'user_command':
         this.museService
           .museManager({ command: message, key: this.key })
           .subscribe((data) => {
-            if (data.response.split(' ')[0] == 'Login') {
-              this.printList(data.response.split('-')[0]);
-              this.key = data.response.split('-')[1];
+            console.log(data);
+            this.printList(data.response);
+            this.current_task = data.currentTask!;
+          });
+        break;
+      case 'user_response':
+        if (message.toLowerCase() == "cancel") { this.current_task = "cancel"}
+        this.museService
+          .museManager({
+            command: this.current_task,
+            message: message,
+            key: this.key,
+          })
+          .subscribe((data) => {
+            console.log(data);
+            if (data.response.token != undefined) {
+              this.printList('Login Success');
+              this.key = data.response.token;
             } else {
               this.printList(data.response);
             }
             this.current_task = data.currentTask!;
           });
-        break;
-      case 'user_response':
-        if (this.current_task.split('-').length > 1) {
-          this.museService
-            .museManager({
-              command: this.current_task.split('-')[0],
-              message: this.current_task.split('-')[1] + '-' + message,
-              key: this.key,
-            })
-            .subscribe((data) => {
-              if (data.response.split(' ')[0] == 'Login') {
-                this.printList(data.response.split('-')[0]);
-                this.key = data.response.split('-')[1];
-              } else {
-                this.printList(data.response);
-              }
-              this.current_task = data.currentTask!;
-            });
-        } else {
-          this.museService
-            .museManager({
-              command: this.current_task!,
-              message: message,
-              key: this.key,
-            })
-            .subscribe((data) => {
-              this.printList(data.response);
-              this.current_task = data.currentTask!;
-            });
-        }
     }
   }
 

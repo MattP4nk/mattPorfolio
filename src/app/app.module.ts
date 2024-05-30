@@ -12,7 +12,8 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { MuseComponent } from './components/muse/muse.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -29,10 +30,12 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     HttpClientModule,
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     CarouselModule.forRoot(),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

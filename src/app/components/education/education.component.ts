@@ -31,9 +31,9 @@ import { InfoService } from 'src/app/services/info.service';
             style="padding: 0px; margin-bottom: 0px; margin-top:10px;"
             *ngFor="let edu of formalEdus"
           >
+           <span class="d-flex red line" style="height: 5px;"></span>
             <h2 class="roboto-text">{{ edu.name }}</h2>
             <p class="roboto-text" style="">{{ edu.details }}<br /></p>
-            <span class="d-flex red line" style="height: 5px;"></span>
           </ul>
         </div>
       </div>
@@ -48,9 +48,9 @@ import { InfoService } from 'src/app/services/info.service';
             style="padding: 0px; margin-bottom: 0px; margin-top:10px;"
             *ngFor="let edu of courseEdus"
           >
+            <span class="d-flex red line" style="height: 5px;"></span>
             <h2 class="roboto-text">{{ edu.name }}</h2>
             <p class="roboto-text" style="">{{ edu.details }}<br /></p>
-            <span class="d-flex red line" style="height: 5px;"></span>
           </ul>
         </div>
       </div>
@@ -65,9 +65,9 @@ import { InfoService } from 'src/app/services/info.service';
             style="padding: 0px; margin-bottom: 0px; margin-top:10px;"
             *ngFor="let edu of hobbiesEdus"
           >
+            <span class="d-flex red line" style="height: 5px;"></span>
             <h2 class="roboto-text">{{ edu.name }}</h2>
             <p class="roboto-text" style="">{{ edu.details }}<br /></p>
-            <span class="d-flex red line" style="height: 5px;"></span>
           </ul>
         </div>
       </div>
